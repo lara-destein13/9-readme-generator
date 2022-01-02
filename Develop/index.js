@@ -2,7 +2,6 @@
 var inquirer = require('inquirer');
 
 
-
 // TODO: Create an array of questions for user input
 const questionsArray = [
     {
@@ -52,8 +51,6 @@ const questionsArray = [
     }
 ];
 
-console.log(questionsArray);
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
@@ -62,3 +59,18 @@ function init() {}
 
 // Function call to initialize app
 init();
+
+
+
+
+// iterate over the array and print each object using console.dir within a function
+
+
+for (let i=0; i<questionsArray.length; i+=1) {
+    const question = questionsArray[i];
+    console.dir(question);
+    
+    // print out question message and wait for answer. use inquire package
+}
+
+
