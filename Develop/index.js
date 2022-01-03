@@ -69,12 +69,14 @@ const questions = [
 // for (var i=0; i< questions.length; i++);
 // const question = questions[i]
 
-console.dir(questions);
+function genMarkdown(answers) {
+    console.dir(answers);
+}
 
 inquirer
   .prompt(questions)
   .then((answers) => {
-    console.dir(answers);
+    genMarkdown(answers);
   })
   .catch((error) => {
     if (error.isTtyError) {
