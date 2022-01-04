@@ -70,7 +70,7 @@ const questions = [
 // const question = questions[i]
 
 function writeTitle(title) {
-    var output = `<h1 align="center">${title} 👋</h1>\n\n `;
+    var output = `<h1>${title} 👋</h1>\n\n `;
     fs.appendFileSync("README.md", output);
 }
 
@@ -81,32 +81,32 @@ function writeDescription(description) {
 }
 
 function writeTableOfContents(tableOfContents) {
-    var output = `## Table of Contents\n - [Description](#description)\n - [Installation](#installation)\n - [Usage](#usage)\n - [License](#license)\n - [Contribution](#contribution)\n - [Tests](#tests)\n - [Questions](#questions)\n\n `
+    var output = `## Table of Contents\n - [Description](#description)\n - [Installation](#installation)\n - [Usage](#usage)\n - [License](#license)\n - [Contribution](#contribution)\n - [Tests](#tests)\n - [Questions](#questions)\n\n`
     fs.appendFileSync("README.md", output);
 }
 
 function writeInstallation(installation) {
-    var output = `${installation}\n `
+    var output = `## Installation\n 💾 ${installation}\n\n`
     fs.appendFileSync("README.md", output);
 }
 
 function writeUsage(usage) {
-    var output = `${usage}\n `
+    var output = `## Usage\n 💻 ${usage}\n\n`
     fs.appendFileSync("README.md", output);
 }
 
 function writeLicense(license) {
-    var output = `${license}\n `
+    var output = `## License\n ![badge](https://img.shields.io/badge/license-${license}-brightgreen)\n This application is covered by the ${license}\n license\n\n`
     fs.appendFileSync("README.md", output);
 }
 
 function writeContributing(contributing) {
-    var output = `${contributing}\n `
+    var output = `## Contributing\n 👪 ${contributing}\n\n`
     fs.appendFileSync("README.md", output);
 }
 
 function writeTests(tests) {
-    var output = `${tests}\n `
+    var output = `## Tests\n ${tests}\n\n`
     fs.appendFileSync("README.md", output);
 }
 
