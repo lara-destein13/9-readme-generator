@@ -1,7 +1,3 @@
-# Professional README Generator Starter Code
-
-[How to create a Professional README](./readme-guide.md)
-
 # 9-readme-generator
 
 ## Description
@@ -43,6 +39,7 @@ See link to a walkthorugh video:https://watch.screencastify.com/v/vdqq4Ya6F55ThE
 
 <img width="989" alt="Screen Shot 2022-01-13 at 4 11 47 PM" src="https://user-images.githubusercontent.com/88476888/149569881-a7e9d1e6-5d26-40e3-b4b7-b8016ab6f2c6.png">
 
+[How to create a Professional README](./readme-guide.md)
 
 ## Contributing
 Made with &hearts; by Lara DeStein
