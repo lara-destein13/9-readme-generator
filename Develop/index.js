@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Including packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require("./utils/generateMarkdown.js")
 
-// TODO: Create an array of questions for user input
+// An array of objects containing questions that will be presented to the user
+// upon running the application in the command line.
 const questions = [
     {
         type: "input",
@@ -61,19 +61,11 @@ const questions = [
     },    
 ];
 
-
-// TODO: Create a function to write README file
-
-// TODO: Create a function to initialize app
-
-// for (var i=0; i< questions.length; i++);
-// const question = questions[i]
-
+// The following functions create a template for our README.md file
 function writeTitle(title) {
-    var output = `<h1>${title} 👋</h1>\n\n `;
+    var output = `<h1>${title}</h1>\n\n `;
     fs.appendFileSync("README.md", output);
 }
-
 
 function writeDescription(description) {
     var output = `## Description\n 🔍 ${description}\n\n `
@@ -110,6 +102,8 @@ function writeTests(tests) {
     fs.appendFileSync("README.md", output);
 }
 
+// A function that generates the Markdown for our README.md file by calling each of the above functions
+// and passing in the answers to each question. 
 function genMarkdown(answers) {
     console.dir(answers);
     fs.writeFileSync('README.md', '');
@@ -123,6 +117,7 @@ function genMarkdown(answers) {
     writeTests(answers.tests);
 }
 
+// Inquirer is used to prompt a user with a quesiton and take in user input (answers).
 inquirer
   .prompt(questions)
   .then((answers) => {
@@ -135,6 +130,7 @@ inquirer
       console.log("bar");
     }
   });
+
 
 
 
